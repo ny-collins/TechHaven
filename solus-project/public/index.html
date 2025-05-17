@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechHaven - Your one-stop shop for the latest smart gadgets, including smartphones, wearables, and accessories.">
+    <title data-i18n="navbar.title">TechHaven</title>
+    <link rel="icon" type="image/png" href="assets/icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="shortcut icon" href="assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/i18next@23/dist/umd/i18next.min.js"></script>
+    <script type="text/javascript">
+        fetch('/api/emailjs-key')
+            .then(response => response.json())
+            .then(data => {
+                emailjs.init({
+                    publicKey: data.publicKey,
+                });
+                console.log('EmailJS initialized with key:', data.publicKey);
+            })
+            .catch(error => console.error('Failed to load EmailJS key:', error));
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <span class="site-title" data-i18n="navbar.title">TechHaven</span>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-container">
+            <ul class="left-menu">
+                <li><a href="#home" data-i18n="navbar.home">Home</a></li>
+                <li><a href="#products" data-i18n="navbar.products">Products</a></li>
+                <li><a href="#blog" data-i18n="navbar.blog">Blog</a></li>
+            </ul>
+            <ul class="right-menu">
+                <li><a href="#support" data-i18n="navbar.support">Support</a></li>
+                <li><a href="#contact" data-i18n="navbar.contact">Contact</a></li>
+                <li class="language-dropdown">
+                    <button class="language-btn" aria-label="Select language" data-i18n="navbar.language">Language</button>
+                    <ul class="language-menu">
+                        <li><button data-lang="en" data-i18n="navbar.lang_en">English</button></li>
+                        <li><button data-lang="fr" data-i18n="navbar.lang_fr">French</button></li>
+                        <li><button data-lang="sw" data-i18n="navbar.lang_sw">Swahili</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" data-i18n="navbar.home">Home</a></li>
+            <li><a href="#products" data-i18n="navbar.products">Products</a></li>
+            <li><a href="#blog" data-i18n="navbar.blog">Blog</a></li>
+            <li><a href="#support" data-i18n="navbar.support">Support</a></li>
+            <li><a href="#contact" data-i18n="navbar.contact">Contact</a></li>
+            <li class="language-dropdown">
+                <button class="language-btn" aria-label="Select language" data-i18n="navbar.language">Language</button>
+                <ul class="language-menu">
+                    <li><button data-lang="en" data-i18n="navbar.lang_en">English</button></li>
+                    <li><button data-lang="fr" data-i18n="navbar.lang_fr">French</button></li>
+                    <li><button data-lang="sw" data-i18n="navbar.lang_sw">Swahili</button></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <section class="hero" id="home">
+        <div class="container">
+            <h2 data-i18n="hero.title">Discover the Latest in Smart Tech</h2>
+            <p data-i18n="hero.subtitle">Explore our hand-picked collection of gadgets designed for the future.</p>
+            <a href="#products" class="btn-primary" data-i18n="hero.cta">Shop Now</a>
+        </div>
+    </section>
+    <section id="products" class="section">
+        <div class="container">
+            <h3 class="section-title" data-i18n="products.title">Featured Products</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <h4 data-i18n="products.smartphones.title">Smartphones</h4>
+                    <p data-i18n="products.smartphones.description">Cutting-edge phones with high performance, AI features, and sleek designs.</p>
+                </div>
+                <div class="card">
+                    <h4 data-i18n="products.wearables.title">Wearables</h4>
+                    <p data-i18n="products.wearables.description">Smartwatches and fitness trackers to keep you connected and healthy on the go.</p>
+                </div>
+                <div class="card">
+                    <h4 data-i18n="products.accessories.title">Accessories</h4>
+                    <p data-i18n="products.accessories.description">From wireless earbuds to power banks—tech essentials to power your day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="blog" class="section light">
+        <div class="container">
+            <h3 class="section-title" data-i18n="blog.title">Latest From Our Blog</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <h4 data-i18n="blog.post1.title">Top change in 2025</h4>
+                    <p data-i18n="blog.post1.description">An expert round-up of this year's best smartphones by performance and value.</p>
+                </div>
+                <div class="card">
+                    <h4 data-i18n="blog.post2.title">Smartwatch Buying Guide</h4>
+                    <p data-i18n="blog.post2.description">Find the perfect wearable based on battery life, features, and design.</p>
+                </div>
+                <div class="card">
+                    <h4 data-i18n="blog.post3.title">Wireless Audio Trends</h4>
+                    <p data-i18n="blog.post3.description">Everything you need to know about the rise of true wireless sound tech.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="reviews" class="section">
+        <div class="container">
+            <h3 class="section-title" data-i18n="reviews.title">Customer Reviews</h3>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p data-i18n="reviews.review1.text">"TechHaven made upgrading my gadgets so easy. Their product guides were spot on!"</p>
+                    <span data-i18n="reviews.review1.author">— Jane K., 29</span>
+                </div>
+                <div class="testimonial">
+                    <p data-i18n="reviews.review2.text">"My smartwatch was delivered fast and works perfectly. I love their clean, modern site!"</p>
+                    <span data-i18n="reviews.review2.author">— Liam P., 35</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="support" class="section light">
+        <div class="container">
+            <h3 class="section-title" data-i18n="support.title">Support & FAQ</h3>
+            <div class="faq-grid">
+                <div class="faq">
+                    <h4 data-i18n="support.faq1.question">How long does delivery take?</h4>
+                    <p data-i18n="support.faq1.answer">Orders are processed within 24 hours and delivered within 1.5 business days.</p>
+                </div>
+                <div class="faq">
+                    <h4 data-i18n="support.faq2.question">Is there a product warranty?</h4>
+                    <p data-i18n="support.faq2.answer">Yes, all products come with a minimum 1-year manufacturer warranty.</p>
+                </div>
+                <div class="faq">
+                    <h4 data-i18n="support.faq3.question">Can I return or exchange items?</h4>
+                    <p data-i18n="support.faq3.answer">We accept returns within 14 days. Exchanges are also supported based on stock availability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">Get in Touch</h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle">We're Here to Help</p>
+            <p class="section-description" data-i18n="contact.description">Whether you have questions, need help getting started, or want to learn more—reach out anytime.</p>
+            <div class="contact-wrapper">
+                <div class="contact-details">
+                    <h3 data-i18n="contact.details.title">Contact Details</h3>
+                    <p><strong data-i18n="contact.details.email_label">Email:</strong> mwangicollins391@gmail.com</p>
+                    <p><strong data-i18n="contact.details.phone_label">Phone:</strong> +254 706 030777</p>
+                    <p><strong data-i18n="contact.details.address_label">Address:</strong> Kasarani, Nairobi 00100</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <p class="response-time" data-i18n="contact.details.response_time">We typically respond within 1.5 business days.</p>
+                </div>
+                <div class="contact-form-wrapper">
+                    <h3 data-i18n="contact.form.title">Send Us a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.form.email_label">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your email" required autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.form.message_label">Message</label>
+                            <input type="text" id="message" name="message" placeholder="Your message" required autocomplete="off">
+                        </div>
+                        <button type="submit" class="btn-primary" data-i18n="contact.form.submit">Send Message</button>
+                    </form>
+                    <div class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container footer-container">
+            <p data-i18n="footer.copyright">© 2025 TechHaven. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Twitter">Twitter</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="YouTube">YouTube</a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
