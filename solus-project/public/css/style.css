@@ -64,7 +64,7 @@ body.nav-open {
 .left-menu, .right-menu {
     display: flex;
     list-style: none;
-    gap: 3rem;
+    gap: 3.5rem;
 }
 
 .nav-menu li a, .left-menu li a, .right-menu li a {
@@ -266,7 +266,7 @@ body.nav-open {
     }
 
     .nav-menu li {
-        margin: 0.3rem 0;
+        margin: 0.4rem 0;
         width: 100%;
     }
 
@@ -301,7 +301,7 @@ body.nav-open {
     }
 
     .language-menu button {
-        padding: 0.3rem 0;
+        padding: 0.4rem 0;
         font-size: 1rem;
         width: 100%;
     }
