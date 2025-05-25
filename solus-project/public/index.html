@@ -13,16 +13,14 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/i18next@23/dist/umd/i18next.min.js"></script>
     <script type="text/javascript">
-        fetch('/api/emailjs-key')
-            .then(response => response.json())
-            .then(data => {
-                emailjs.init({
-                    publicKey: data.publicKey,
-                });
-                console.log('EmailJS initialized with key:', data.publicKey);
-            })
-            .catch(error => console.error('Failed to load EmailJS key:', error));
-    </script>
+    (function () {
+        emailjs.init({
+            publicKey: 'kek980wSO8yjoskqI'
+        });
+        console.log('EmailJS initialized with public key');
+    })();
+</script>
+
 </head>
 <body>
     <nav class="navbar">
